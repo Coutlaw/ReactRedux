@@ -20,3 +20,6 @@ const CommentDetail = () => {
 			</div>
 	)
 }
+
+// makes this visible to our other files
+export default CommentDetail;
