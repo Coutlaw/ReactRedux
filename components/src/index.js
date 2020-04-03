@@ -8,9 +8,24 @@ const App = () => {
 	// Components are the exception to the JS rule in JSX
 	return (
 		<div className="ui container comments">
-			<CommentDetail author="Sam" />
-			<CommentDetail author="Alex" />
-			<CommentDetail author="Jane" />
+			<CommentDetail
+			author="Sam" 
+			timeAgo="Today at 4:45PM" 
+			comment="nice comments" 
+			avatar={faker.image.avatar()}
+			/>
+			<CommentDetail
+			author="Alex"
+			timeAgo="Today at 2:00AM"
+			comment="woot a comment"
+			avatar={faker.image.avatar()}
+			/>
+			<CommentDetail
+			author="Jane"
+			timeAgo="Yesterday at 5:00PM"
+			comment="1337"
+			avatar={faker.image.avatar()}
+			/>
 		</div>
 	)
 }
