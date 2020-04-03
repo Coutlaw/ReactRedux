@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import faker from 'faker';
 // Web pack will figure out this is a js file 👇
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
 const App = () => {
 	// Components are the exception to the JS rule in JSX
 	return (
 		<div className="ui container comments">
+			<ApprovalCard />
 			<CommentDetail
 			author="Sam" 
 			timeAgo="Today at 4:45PM" 
