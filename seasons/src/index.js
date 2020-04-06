@@ -44,7 +44,7 @@ class App extends React.Component {
 		} else if (!this.state.errorMessage && this.state.lat) {
 			return <SeasonDisplay lat={this.state.lat} />;
 		} else {
-			return <Spinner />;
+			return <Spinner text="Waiting for location access privileges"/>;
 		}
 	}
 }
