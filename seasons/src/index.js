@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 class App extends React.Component {
 	// we can remove the constructor and setting state is equivalent to using a constructor
@@ -40,7 +41,7 @@ class App extends React.Component {
 		if(this.state.errorMessage && !this.state.lat){
 			return <div>Error: {this.state.errorMessage}</div>;
 		} else if (!this.state.errorMessage && this.state.lat) {
-			return <div>Latitude: {this.state.lat}</div>;
+			return <SeasonDisplay lat={this.state.lat} />;
 		} else {
 			return <div>Loading</div>;
 		}
