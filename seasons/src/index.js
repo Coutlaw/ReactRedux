@@ -36,9 +36,7 @@ class App extends React.Component {
 	// ComponentDidUpdate() : runs anytime the  component re-renders
 	// ComponentWillUnmount() : runs when component is no longer rendered
 	
-	// required for every React.Component
-	render() {
-		// conditional rendering
+	renderContent() {
 		if(this.state.errorMessage && !this.state.lat){
 			return <div>Error: {this.state.errorMessage}</div>;
 		} else if (!this.state.errorMessage && this.state.lat) {
@@ -46,6 +44,12 @@ class App extends React.Component {
 		} else {
 			return <Spinner text="Waiting for location access privileges"/>;
 		}
+	}
+	render() {
+		<div className="border red">
+			{this.renderContent()}
+		</div>
+		
 	}
 }
 
