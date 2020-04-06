@@ -27,16 +27,31 @@ class App extends React.Component {
 			}
 		);
 	}
+
+	componentDidMount() {
+		console.log('my component rendered on the screen');
+	}
+
+	// render will always run right before this
+	componentDidUpdate() {
+		console.log('my component re-rendered : an update was performed');
+	}
+
+	// Lifecycle methods
+	// ComponentDidMount() : runs on component first rendering
+	// ComponentDidUpdate() : runs anytime the  component re-renders
+	// ComponentWillUnmount() : runs when component is no longer rendered
 	
 	// required for every React.Component
 	render() {
-		return (
-		<div>
-			Latitude: {this.state.lat}
-			<br />
-			Error: {this.state.errorMessage}
-		</div>
-		);
+		// conditional rendering
+		if(this.state.errorMessage && !this.state.lat){
+			return <div>Error: {this.state.errorMessage}</div>;
+		} else if (!this.state.errorMessage && this.state.lat) {
+			return <div>Latitude: {this.state.lat}</div>;
+		} else {
+			return <div>Loading</div>;
+		}
 	}
 }
 
