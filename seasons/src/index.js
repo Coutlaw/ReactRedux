@@ -2,14 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
-	// component constructor which is ran on initialization
-	constructor(props) {
-		// superclass constructor
-		super(props);
-
-		// state object: object with lat property (null because it has no value)
-		this.state = { lat: null, errorMessage: '' };
-	}
+	// we can remove the constructor and setting state is equivalent to using a constructor
+	state = {lat: null, errorMessage: ''};
 
 	componentDidMount() {
 		// getCurrentPositions has two callbacks: a success and failure
