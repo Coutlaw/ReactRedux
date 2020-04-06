@@ -9,7 +9,9 @@ class App extends React.Component {
 
 		// state object: object with lat property (null because it has no value)
 		this.state = { lat: null, errorMessage: '' };
+	}
 
+	componentDidMount() {
 		// getCurrentPositions has two callbacks: a success and failure
 		window.navigator.geolocation.getCurrentPosition(
 			// success callback
@@ -26,10 +28,6 @@ class App extends React.Component {
 				this.setState({ errorMessage: err.message});
 			}
 		);
-	}
-
-	componentDidMount() {
-		console.log('my component rendered on the screen');
 	}
 
 	// render will always run right before this
