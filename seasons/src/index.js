@@ -46,10 +46,10 @@ class App extends React.Component {
 		}
 	}
 	render() {
-		<div className="border red">
+		return(<div className="border red">
 			{this.renderContent()}
 		</div>
-		
+		);
 	}
 }
 
