@@ -3,13 +3,7 @@ import { render } from 'react-dom';
 
 class SearchBar extends React.Component {
 
-	onInputChanged(event) {
-		console.log(event.target.value);
-	}
-
-	// onInputClick() {
-	// 	console.log('input was clicked');
-	// }
+	state = { term: ''};
 
 	render() {
 		return (
@@ -18,8 +12,10 @@ class SearchBar extends React.Component {
 					<div className="field">
 						<label>Image Search</label>
 						<input type="text"
-						onChange={this.onInputChanged}
-						//onClick={this.onInputClick}
+						// will trigger a re-render by using state
+						onChange={(e) => this.setState({term: e.target.value})}
+						// will overwrite whatever text was previously in the input during the re-render
+						value={this.state.term}
 						/>
 					</div>
 				</form>
