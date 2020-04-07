@@ -8,7 +8,8 @@ class SearchBar extends React.Component {
 	// arrow function instead of a typical function syntax
 	onFormSubmit = (event) => {
 		event.preventDefault();
-		console.log(this.state.term);
+		// get the parents callback
+		this.props.onSubmit(this.state.term);
 	}
 
 	render() {
