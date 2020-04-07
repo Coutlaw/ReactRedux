@@ -4,18 +4,24 @@ import { render } from 'react-dom';
 class SearchBar extends React.Component {
 
 	state = { term: ''};
+	
+	// arrow function instead of a typical function syntax
+	onFormSubmit = (event) => {
+		event.preventDefault();
+		console.log(this.state.term);
+	}
 
 	render() {
 		return (
 			<div className="ui segment">
-				<form className="ui form">
+				<form className="ui form" onSubmit={this.onFormSubmit}>
 					<div className="field">
 						<label>Image Search</label>
 						<input type="text"
-						// will trigger a re-render by using state
-						onChange={(e) => this.setState({term: e.target.value})}
 						// will overwrite whatever text was previously in the input during the re-render
 						value={this.state.term}
+						// will trigger a re-render by using state
+						onChange={(e) => this.setState({term: e.target.value})}
 						/>
 					</div>
 				</form>
