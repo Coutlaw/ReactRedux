@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectSong } from '../actions';
 
 class SongList extends Component {
 	renderList() {
-		return this.props.songs.map((songs) => {
+		return this.props.songs.map((song) => {
 			return (
-				<div className="item" key={songs.title}>
+				<div className="item" key={song.title}>
 					<div className="right floated content">
-						<button className="ui button primary">
+						<button className="ui button primary"
+						onClick={() => this.props.selectSong(song)}>
 							Select
 						</button>
 					</div>
-					<div className="content">{songs.title}</div>
+					<div className="content">{song.title}</div>
 				</div>
 			);
 		});
@@ -34,4 +36,8 @@ const mapStateToProps = (state) => {
 }
 
 // connects redux to the component
-export default connect(mapStateToProps) (SongList);
+// giving it to our dispatch
+export default connect(mapStateToProps, {
+	// passes our action creator to props
+	selectSong: selectSong
+}) (SongList);
