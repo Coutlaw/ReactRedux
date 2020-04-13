@@ -9,5 +9,5 @@ The projects are named after their functionality, and increase in complexity as 
 3. [Seasons](https://github.com/Coutlaw/ReactRedux/tree/master/seasons): React app that uses location data and month to determine a season
 4. [Pics](https://github.com/Coutlaw/ReactRedux/tree/master/pics): Picture search bar using external API with axios
 5. [Songs](https://github.com/Coutlaw/ReactRedux/tree/master/songs): First app with redux store as a song preview player
-6. [Blog Posts](https://github.com/Coutlaw/ReactRedux/tree/master/blog_posts): More complex redux app to display a collection of blog posts (in progress)
+6. [Blog Posts](https://github.com/Coutlaw/ReactRedux/tree/master/blog_posts): More complex redux app to display a collection of blog posts with redux-thunk
 
