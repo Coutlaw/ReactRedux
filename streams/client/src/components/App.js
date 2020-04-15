@@ -7,25 +7,6 @@ import StreamList from './streams/StreamList';
 import StreamShow from './streams/StreamShow';
 import Header from './Header';
 
-// const PageOne = () => {
-//   return (
-//     <div>
-//       PageOne
-//       <Link to="/pagetwo">Navigate to Page two</Link>
-//     </div>
-//   );
-// };
-
-// const PageTwo = () => {
-//   return (
-//     <div>
-//       PageTwo
-//       <button>Clicky</button>
-//       <Link to="/">Navigate to Page one</Link>
-//     </div>
-//   );
-// };
-
 const App = () => {
   return (
     <div className="ui container">
